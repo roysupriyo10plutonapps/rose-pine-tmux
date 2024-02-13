@@ -374,7 +374,7 @@ main() {
     fi
 
     if [[ "$directory" == "on" ]]; then
-        right_column=$right_column$show_directory
+        left_column=$left_column$show_directory
     fi
 
     # The append and prepend sections are for inter-plugin compatibility

@@ -373,21 +373,22 @@ main() {
         right_column=$right_column$show_date_time
     fi
 
-    if [[ "$directory" == "on" ]]; then
-        left_column=$left_column$show_directory
-    fi
-
     # The append and prepend sections are for inter-plugin compatibility
     # and extension
+
     if [[ "$disable_active_window_menu" == "on" ]]; then
         left_column=$show_session
     else
         left_column=$show_session$show_window
     fi
+
     #
     # Appending / Prepending custom user sections to
     if [[ "$status_left_prepend_section" != "" ]]; then
         left_column=$status_left_prepend_section$left_column
+    fi
+    if [[ "$directory" == "on" ]]; then
+        left_column=$left_column$show_directory
     fi
     if [[ "$status_left_append_section" != "" ]]; then
         left_column=$left_column$status_left_append_section$spacer

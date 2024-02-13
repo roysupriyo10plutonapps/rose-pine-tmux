@@ -290,7 +290,7 @@ main() {
     readonly show_date_time=" #[fg=$thm_foam]$date_time#[fg=$thm_subtle]$right_separator#[fg=$thm_subtle]$date_time_icon "
 
     local show_directory
-    readonly show_directory="$spacer#[fg=$thm_subtle]$current_folder_icon #[fg=$thm_rose]#{b:pane_current_path} $right_separator"
+    readonly show_directory="$spacer#[fg=$thm_subtle]$current_folder_icon #[fg=$thm_rose]#{b:pane_current_path}$spacer$right_separator"
 
     local show_directory_in_window_status
     # BUG: It doesn't let the user pass through a custom window name
